@@ -1,4 +1,9 @@
-My Python related study
------------------------
+# My Python related study
 
-I found 'The Python Book' in 'https://archive.org/details/The_Python_Book_2nd_Edition'.
+For Machine Learning, I am planning to learn/use Python.
+Currently I am learning Pythong in two ways:
+
+1) Online Course
+2) Books
+
+TO DO
