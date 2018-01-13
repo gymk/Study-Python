@@ -22,7 +22,8 @@ def cat_files(filenames):
 
 def grep(pattern, filenames):
     """
-    another version for test
+    This performs linux like text based grep over the files, returns lines having the given pattern.
+    It uses cat_files generator as input and returns new generator for pattern matched lines
         :param pattern: pattern to be searched over the files
         :param filenames: list of filenames
     """
@@ -31,7 +32,7 @@ def grep(pattern, filenames):
 def print_lines(lines):
     """
     function which iterates over lines object and prints it content
-        :param lines:  an iterator over lines for printing
+        :param lines:  an iterator/generator over lines for printing
     """
     print('--->print_lines {0}'.format(type(lines)))
     for line in lines:
