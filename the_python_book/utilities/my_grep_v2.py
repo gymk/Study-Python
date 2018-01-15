@@ -36,7 +36,9 @@ def print_lines(lines):
     """
     print('--->print_lines {0}'.format(type(lines)))
     for line in lines:
-        print(line)
+        sys.stdout.write(line)
+        #print(line)
+    sys.stdout.flush()
 
 def start():
     """

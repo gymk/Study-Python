@@ -7,7 +7,9 @@ def my_grep(pattern,filenames):
     for f in filenames:
         for line in open(f):
             if pattern in line:
-                print(line)
+                sys.stdout.write(line)
+                #print(line)
+    sys.stdout.flush()
 
 def start():
     print(sys.argv[1])
