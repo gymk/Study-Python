@@ -34,7 +34,7 @@ hangman_pics = ['''
     ======''','''
     +---+
     o   |
-   /    |
+    |   |
         |
     ======''','''
     +---+
@@ -120,11 +120,25 @@ for word in words:
     print(word)
 '''
 
+print('H A N G M A N')
+print()
+
+difficulty = 'X'
+while difficulty not in ['E', 'M', 'H']:
+    print('Enter the difficulty: E - Easy, M - Medium, H - Hard')
+    difficulty = input().upper()
+    if difficulty == 'M':
+        del hangman_pics[8]
+        del hangman_pics[7]
+    if difficulty == 'H':
+        del hangman_pics[8]
+        del hangman_pics[7]
+        del hangman_pics[4]
+        del hangman_pics[3]
+
 playAgain = 'Yes'
 while playAgain == 'Yes' or playAgain == 'yes' or playAgain == 'Y' or playAgain == 'y':
-    print('H A N G M A N')
-    print()
-    
+
     word_category, word = getRandomWord(words)
     
     letters = ''.join(set(word))
