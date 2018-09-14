@@ -70,11 +70,6 @@ hangman_pics = ['''
     ======'''
 ]
 
-def isLetterInWord(word, char):
-    if(char in word):
-        return True;
-    return False;
-
 def getUserGuess():
     while True:
         letter = input()
@@ -153,7 +148,7 @@ while playAgain == 'Yes' or playAgain == 'yes' or playAgain == 'Y' or playAgain 
         missed_count += 1
         #display_hangman(word, guessed_letters, missed_count, missed_letters)
 
-    if len(word) == 0:
+    if len(guessed_letters) == len(letters):
         print('Yes! The secret word is \"' + word + '\"! You have won!')
     else:
         display_hangman(word, guessed_letters, missed_count, missed_letters)
